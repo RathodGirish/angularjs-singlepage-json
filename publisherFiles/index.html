@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS
+    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
+
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="forwardAppPublisher" ng-controller="PublisherDatatableCtrl">
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand customLogo" href="index.html"><img src="../image/logo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active pad"><a href="#">Packages</a></li>
+                <li class="pad"><a href="#">Deals</a></li>
+                <li class="pad"><a href="#">History</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href=""><i class="fa fa-lg fa-search"></i></a>
+                </li>
+
+                <li class="dropdown" >
+                    <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i><span class="notification_badge badge">3</span>
+                    </a>
+                    <ul class="notification dropdown-menu arrow" role="menu">
+                        <li class="notification-header"><span>Notifications</span><span class="badge">3</span></li>
+                        <li class="divider"></li>
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer"><a class="active row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Fabio Basile</span><span class="msg">just buy "campaign name"</span></div>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Eric Hoffman</span><span class="msg">sent you a peraonal message</span></div>
+                                </div>
+                            </a></li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Capaign name 2</span><span class="msg">has started at 12:00 pm today</span></div>
+                                </div>
+                            </a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown active-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle profile-image" src="../image/user/default_profile_user.png"></a>
+                    <ul class="profile-menu dropdown-menu" role="menu">
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer">
+                                <a class="active row">
+                                    <div class="row-leftmrg subtitle">
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-user pad"></i>  Profile</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-cog pad"></i>  Settings</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-question-sign pad"></i>  Help center</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-log-out pad"></i>  Sign out</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<div class="subnavbar">
+    <div class="subnavbar-inner">
+        <div class="container">
+            <ul class="mainnav">
+                <li class="active"><a href="#"><h5>ACTIVE DEALS</h5> </a> </li>
+                <li><a href="#"><h5>PENDING DEALS</h5> </a> </li>
+                <li><a href="#"><h5>PAST DEALS</h5> </a></li>
+            </ul>
+            <div class="pull-right subnav-spacer col-sm-2" ><button id="createDeal" class="btn btn-danger small-high-btn"><h6>Create deal</h6></button></div>
+        </div>
+
+        <!-- /container -->
+    </div>
+    <!-- /subnavbar-inner -->
+</div>
+
+<!-- Alert Messages Error -->
+<div id="dangerAlert" class="alert-div" style="display:none" >
+    <div class="alert alert-custom-danger alert-dismissable">
+        <a class="close" data-dismiss="alert" href="#" ><button type="button" class="btn btn-danger btn-circle">
+            <i class="glyphicon glyphicon-remove"></i></button>
+        </a>
+        <i class="glyphicon glyphicon-warning-sign fa-lg"></i>
+        <strong>Something wrong happened !</strong> This is the short description about the problem and the solution.
+    </div>
+</div>
+<!-- End Alert Messages Error -->
+
+<!-- Success Alert Messages -->
+<div id="successAlert" class="alert-div" style="display:none">
+    <div class="alert alert-custom-success alert-dismissable">
+        <a class="close" data-dismiss="alert" href="#">
+            <button type="button" class="btn btn-success btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+        </a>
+        <i class="glyphicon glyphicon-warning-sign fa-lg"></i>
+        <strong>Something good happened !</strong> This is the short description about it.
+    </div>
+</div>
+<!-- End success alert message -->
+
+<!-- /.container -->
+<div class="container margin-spacer">
+    <div class="col-md-12">
+        <div class="col-sm-9"><span class="small-header-text"><b ng-bind='totalDeals'></b> deals with <b>8</b> buyers</span></div>
+        <div class="col-sm-2 input-group pull-right">
+            <input style="padding: 6px 15px 6px 30px;" id="searchPackage" type="text" class="search rounded form-control" placeholder="    Search">
+            <span class="subtitle glyphicon glyphicon-search form-control-feedback"></span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <table id="packageDataTable" class="display" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>RANK</th>
+            <th>NAME</th>
+            <th>PUBLISHER</th>
+            <th>STATUS</th>
+            <th>IMPRES.</th>
+            <th>PRICE</th>
+            <th>REVENUE</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<!-- Core Javascript - via CDN -->
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+<!-- JS (load angular, ui-router, and our custom js file) -->
+<script src="../js/angular/angular-datatables.min.js"></script>
+<script src="http://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../js/angular/forwardAppPublisher.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+
+</html>

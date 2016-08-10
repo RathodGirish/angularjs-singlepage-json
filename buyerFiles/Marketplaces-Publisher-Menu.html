@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS
+    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../css/jquery.masterblaster.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="forwardAppBuyer" >
+<!-- Navigation -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand customLogo" href="Marketplaces-Basis.html"><img src="../image/logo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active pad"><a href="#">Marketplace</a></li>
+                <li class="pad"><a href="Current-Deals.html">Current deals</a></li>
+                <li class="pad"><a href="#">History</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-search"></i></a>
+                </li>
+
+                <li >
+                    <a href="#"><i class="fa fa-bell fa-lg"></i>
+                    </a>
+                </li>
+                <li class="dropdown active-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle profile-image" src="../image/user/default_profile_user.png"></a>
+                    <ul class="profile-menu dropdown-menu" role="menu">
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer">
+                                <a class="active row">
+                                    <div class="row-leftmrg subtitle">
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-user pad"></i>  Profile</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-cog pad"></i>  Settings</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-question-sign pad"></i>  Help center</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-log-out pad"></i>  Sign out</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- subnavbar -->
+<div class="row row-zero-mrg buyer-subnav-border">
+    <div class="container">
+        <div class="col-md-8">
+
+            <!-- Start All Platforms dropdown -->
+            <div class="col-md-2 buyerText-center divider-right">
+                <div class="dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" aria-expanded="true">
+                        <h5 class="custom-text-align">All platforms  <span class="caret"></span></h5>
+                    </div>
+                    <ul class="dropdown-menu custom-drop-medium" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class="menu-arrow">
+                            <div class="menu-arrow-up"></div>
+                        </li>
+                        <li class="col-md-12 custom-drop-row-medium">
+                            <div class="row">
+                                <ul role="menu" class="nav col-md-12">
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">All platform</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Desktop</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Mobile</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Video</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End All Platforms dropdown -->
+            <!-- Start all categories dropdown -->
+            <div class="col-md-2 buyerText-center divider-right">
+                <div class="dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" aria-expanded="true">
+                        <h5 class="custom-text-align">All categories  <span class="caret"></span></h5>
+                    </div>
+                    <ul class="dropdown-menu custom-drop-big" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class="menu-arrow">
+                            <div class="menu-arrow-up"></div>
+                        </li>
+                        <li class="dropdown-header">
+                            Choose category
+                        </li>
+                        <li class="col-md-12 custom-drop-row">
+                            <div class="row">
+                                <ul role="menu" class="nav col-md-6">
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">All Things Apple</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Automotive</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Business & Finance</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Cryptocurrency</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Education</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Entertainment</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Family & Parenting</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Gaming</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Food & Drink</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Health & Fitness</a></li>
+                                </ul>
+                                <ul role="menu" class="nav col-md-6">
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Home & Architecture</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Government & Politics</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Pets</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Sports</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Beauty & Fashion</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Technology</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Travel</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Weddings</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Web Design & Development</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Visual Arts & Design</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End all categories dropdown -->
+            <!-- Start Featured dropdown -->
+            <div class="col-md-2 buyerText-center">
+                <div class="dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" aria-expanded="true">
+                        <h5 class="custom-text-align">Featured  <span class="caret"></span></h5>
+                    </div>
+                    <ul class="dropdown-menu custom-drop-medium" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class="menu-arrow">
+                            <div class="menu-arrow-up"></div>
+                        </li>
+                        <li class="col-md-12 custom-drop-row-medium">
+                            <div class="row">
+                                <ul role="menu" class="nav col-md-12">
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">All offers</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Featured</a></li>
+                                    <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">Discounted</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Featured dropdown -->
+        </div>
+        <div class="col-md-4" ><a href="Create-Your-Own_Package.html"><button class="btn btn-danger custom-btn-align"><h6>Create your own package</h6></button></div></a>
+    </div>
+</div>
+
+<div class="container margin-spacer" >
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-lg-9" ng-controller="MarketplacesPublisherPaginationCtrl">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-default navbar-custom">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                            <ul class="nav navbar-nav navbar-custom-underline">
+                                <li class="active"><a href="Marketplaces-Publisher-Menu.html">PUBLISHERS</a></li>
+                                <li><a href="Marketplaces-Basis.html">PACKAGES</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right navbar-custom-underline">
+                                <li ng-hide="grouping" ng-click="isList( 'simplegrid' )"><a href="#" id="gridView"><span class="glyphicon glyphicon-th" ></span></a></li>
+                                <li ng-hide="grouping" ng-click="isList( 'simplelist' )"><a href="#" id="listView"><span class="glyphicon glyphicon-align-justify"></span></a></li>
+                                <li ng-show="grouping" ng-click="isList( 'false' )" id="simplepublishergrid"><a href="#" id="gridViewGroup"><span class="glyphicon glyphicon-th" ></span></a></li>
+                                <li ng-show="grouping" ng-click="isList( 'true' )"><a href="#" id="listViewGroup"><span class="glyphicon glyphicon-align-justify"></span></a></li>
+                                <li><a ><span class="glyphicon glyphicon-unchecked"></span></a>
+                                    <div class="dropdown set-position">
+                                        <div class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" aria-expanded="true">
+                                            <span class="glyphicon glyphicon-unchecked" id="unchkpop"></span>
+                                        </div>
+                                        <ul class="dropdown-menu custom-drop-medium dropdown-margin-packshort" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li class="menu-arrow left-arrow">
+                                                <div class="menu-arrow-up"></div>
+                                            </li>
+                                            <li class="dropdown-header">
+                                                Group by
+                                            </li>
+                                            <li class="col-md-12 custom-drop-row-medium">
+                                                <div class="row">
+                                                    <ul role="menu" class="nav col-md-12">
+                                                        <li role="presentation"><a class="drop-text-color" ng-click="groupBy( 'category' )" role="menuitem" tabindex="-1" href="#">Category</a></li>
+                                                        <li role="presentation"><a class="drop-text-color" ng-click="groupBy( 'size' )" role="menuitem" tabindex="-1" href="#">Size</a></li>
+                                                        <li role="presentation"><a class="drop-text-color" ng-click="groupBy( 'platform' )" role="menuitem" tabindex="-1" href="#">Platform</a></li>
+                                                        <li role="presentation"><a class="drop-text-color" ng-click="groupBy( 'publisher' )" role="menuitem" tabindex="-1" href="#">Publisher</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+
+            <!-- Publishers criteria -->
+            <!-- /.container -->
+            <div class="col-sm-12 col-md-12 col-lg-12" ng-hide="grouping">
+                <div class="col-sm-9 small-spacer">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" aria-expanded="true">
+                            <span class="small-spacer small-header-text"><b ng-bind="itemsPerPage"> </b><span class="caret"></span> publishers meet your criteria</span>
+                        </div>
+                        <ul class="dropdown-menu custom-drop-medium dropdown-margin-packshort" role="menu" aria-labelledby="dropdownMenu1">
+                            <li class="menu-arrow">
+                                <div class="menu-arrow-up"></div>
+                            </li>
+                            <li class="dropdown-header">
+                                Choose results display
+                            </li>
+                            <li class="col-md-12 custom-drop-row-medium">
+                                <div class="row">
+                                    <ul role="menu" class="nav col-md-12">
+                                        <!--<li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">25 results per page</a></li>
+                                        <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">50 results per page</a></li>
+                                        <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">100 results per page</a></li>
+                                        <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">250 results per page</a></li>
+                                        <li role="presentation"><a class="drop-text-color" role="menuitem" tabindex="-1" href="#">infinite scrolling</a></li>-->
+                                        <li role="presentation" ng-repeat="res in results" ><a class="drop-text-color" role="menuitem" tabindex="-1" href="#"  ng-click="changeItemsPerPage( res );"> <span ng-bind="res"></span> result per page</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Publishers Criteria -->
+
+            <div id="gridViewDiv" class="col-sm-12 col-md-12 col-lg-12 spacer" ng-hide="grouping || !simplegrid">
+               <div class="row previews" >
+                    <div class="col-lg-4 col-sm-6 small-spacer-left-right" ng-repeat="publisher in publishers | offset: currentPage*itemsPerPage | limitTo: itemsPerPage">
+                        <div class="thumbnail">
+                            <a class="post-image-link" href="Package-Details-PublisherOverview.html">
+                                <div>
+                                    <div class="right-fix-corner">
+                                    </div>
+                                    <img class="img-responsive" src="../image/user/{{publisher.image}}" alt=""  />
+                                </div>
+                            </a>
+                            <div class="text-center">
+                                <h5 class="title h3" ng-bind="publisher.publisherName"><br></h5>
+                                <h5 class="subtitle" ng-bind="publisher.category"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+
+            <div id="listViewDiv" class="col-sm-12 col-md-12 col-lg-12 spacer thumbnail" ng-hide="!simplelist">
+                <div class="row previews">
+                    <div class=" col-xs-12 col-md-12 col-lg-12  small-spacer-left-right" ng-repeat="publisher in publishers | offset: currentPage*itemsPerPage | limitTo: itemsPerPage">
+                        <div class="col-md-12 " style="border: 1px solid #ddd;">
+                            <a class="post-image-link" href="Package-Details-PublisherOverview.html">
+                                <div class="col-md-1"><img class="x-small-image img-responsive" src="../image/user/{{publisher.modalImage}}" alt=""  /></div>
+                                <div class="col-md-5"><h5 class="subtitle" ng-bind="publisher.publisherName"><br></h5></div>
+                            </a>
+                            <div class="col-md-2"><h5 class="subtitle">publisher</h5></div>
+                            <div class="col-md-2"><h5 class="subtitle" ng-bind="publisher.category"></h5></div>
+                            <div class="col-md-2"><h5 class="subtitle" ng-bind="publisher.price"></h5></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gridViewGroupDiv" class="col-sm-12 col-md-12 col-lg-12 spacer" ng-show="grouping" ng-hide="gridgroup">
+                <div class="row previews" ng-repeat="group in groups">
+                    <div class="col-lg-12 small-spacer-left-right"><h2 class="line"><span  class="line-center"> <h5 class="subtitle" ng-bind-template="{{group.label}} ( {{group.publishers.length}} )">  </h5></span></h2>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 small-spacer-left-right" ng-repeat="publisher in group.publishers">
+                        <div class="thumbnail">
+                            <a class="post-image-link" href="Package-Details-PackageOverview.html">
+                                <div>
+                                    <div class="right-fix-corner">
+                                        <div id="group-triangle-topright"><label class="project-lable" ng-bind="publisher.price"></label></div>
+                                    </div>
+                                    <img class="img-responsive" src="../image/user/{{publisher.image}}" alt=""  />
+                                </div>
+                            </a>
+                            <div class="text-center">
+                                <h5 class="title h3" ng-bind="publisher.publisherName"><br></h5>
+                                <h5 class="subtitle" ng-bind="publisher.category"></h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="listViewGroupDiv" class="col-sm-12 col-md-12 col-lg-12 spacer" ng-show="listgrouping">
+                <div class="row previews" ng-repeat="group in groups">
+                    <div class="col-lg-12 small-spacer-left-right"><h2 class="line"><span  class="line-center"> <h5 class="subtitle" ng-bind-template="{{group.label}} ( {{group.publishers.length}} )">  </h5></span></h2>
+                    </div>
+                    <div class="col-lg-12 small-spacer-left-right">
+                        <div class="col-sm-12 small-spacer-left-right thumbnail">
+                            <div class=" col-sm-12 col-md-12 col-lg-12  small-spacer-left-right" ng-repeat="publisher in group.publishers">
+                                <div class="col-md-12 " style="border: 1px solid #ddd;">
+                                    <a class="post-image-link" href="Package-Details-PublisherOverview.html">
+                                        <div class="col-md-1"><img class="x-small-image img-responsive" src="../image/user/{{publisher.modalImage}}" alt=""  /></div>
+                                        <div class="col-md-5"><h5 class="subtitle" ng-bind="publisher.publisherName"><br></h5></div>
+                                    </a>
+                                    <div class="col-md-2"><h5 class="subtitle">publisher</h5></div>
+                                    <div class="col-md-2"><h5 class="subtitle" ng-bind="publisher.category"></h5></div>
+                                    <div class="col-md-2"><h5 class="subtitle" ng-bind="publisher.price"></h5></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-12 col-lg-12 thumbnail" ng-hide="grouping">
+                <div class="text-center ">
+                    <div class="pagination">
+                        <ul>
+                            <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                                <a href="#" ng-bind="n+1"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-md-4 col-lg-3">
+            <div class="col-sm-12"><h4 class="subtitle">FILTER RESULTS</h4></div>
+
+            <div class="col-sm-12 thumbnail">
+                <div class="accordion accordion-custom">
+                    <h6 class="subtitle">AUDIENCE <i class="glyphicon glyphicon-chevron-down pull-right"></i></h6>
+                    <div>
+                        <label>Age : </label>
+                        <div id="age-range"></div>
+                        <label id="ageStart" class="slider-left"></label>
+                        <label id="ageEnd" class="slider-right"></label>
+                        <br /><hr />
+                        <label>Gender : </label><br />
+                        <select id="gender">
+                            <option selected="selected" value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <hr />
+                        <label>Custom audience : </label><br />
+                        <select id="audience">
+                            <option selected="selected" value="All">All</option>
+                        </select>
+                        <hr />
+                        <label>Location : </label><br />
+                        <select id="location">
+                            <option selected="selected" value="Worldwide">Worldwide</option>
+                        </select>
+                    </div>
+                    <h6 class="subtitle">NUMBER OF VIEWS <i class="glyphicon glyphicon-chevron-down pull-right"></i></h6>
+                    <div>
+                        <select id="views">
+                            <option selected="selected" value="Minimum">Minimum</option>
+                        </select>
+                    </div>
+                    <h6 class="subtitle">SIZE <i class="glyphicon glyphicon-chevron-down pull-right"></i></h6>
+                    <div>
+                        <select id="size">
+                            <option selected="selected" value="All sizes">All sizes</option>
+                        </select>
+                    </div>
+                    <h6 class="subtitle">KEYWORDS <i class="glyphicon glyphicon-chevron-down pull-right"></i></h6>
+                    <div>
+                        <label>Include : </label>
+                        <input id="includeKeywordInput" placeholder="Keyword + enter"/>
+                        <hr />
+                        <label>Exclude : </label>
+                        <input id="excludeKeywordInput" placeholder="Keyword + enter"/>
+                    </div>
+                    <h6 class="subtitle">VIEWABILITY <i class="glyphicon glyphicon-chevron-down pull-right"></i></h6>
+                    <div>
+                        <label>Above the fold : </label><br />
+                        <select id="fold">
+                            <option selected="selected" value="No">No</option>
+                        </select>
+                    </div>
+                    <h6 class="subtitle">PRICE <i class="glyphicon glyphicon-chevron-down pull-right"></i></h6>
+                    <div>
+                        <div id="price-range"></div>
+                        <label id="priceStart" class="slider-left"></label>
+                        <label id="priceEnd" class="slider-right"></label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery
+<script src="js/jquery.js"></script> -->
+<script type="text/javascript" src="../js/angular/angular.js"></script>
+<script type="text/javascript" src="../js/angular/app.js"></script>
+<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script data-require="bootstrap@3.1.1" data-semver="3.1.1" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="../js/pagination/pagination.js"></script>
+<script type="text/javascript" src="../js/forward-app.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.masterblaster.js"></script>
+</body>
+
+</html>

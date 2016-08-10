@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS
+    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body ng-app="forwardAppPublisher" >
+<!-- Navigation -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand customLogo" href="index.html"><img src="../image/logo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active pad"><a href="#">Packages</a></li>
+                <li class="pad"><a href="#">Deals</a></li>
+                <li class="pad"><a href="#">History</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href=""><i class="fa fa-lg fa-search"></i></a>
+                </li>
+
+                <li class="dropdown" >
+                    <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i><span class="notification_badge badge">3</span>
+                    </a>
+                    <ul class="notification dropdown-menu arrow" role="menu">
+                        <li class="notification-header"><span>Notifications</span><span class="badge">3</span></li>
+                        <li class="divider"></li>
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer"><a class="active row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Fabio Basile</span><span class="msg">just buy "campaign name"</span></div>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Eric Hoffman</span><span class="msg">sent you a peraonal message</span></div>
+                                </div>
+                            </a></li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Capaign name 2</span><span class="msg">has started at 12:00 pm today</span></div>
+                                </div>
+                            </a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown active-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle profile-image" src="../image/user/default_profile_user.png"></a>
+                    <ul class="profile-menu dropdown-menu" role="menu">
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer">
+                                <a class="active row">
+                                    <div class="row-leftmrg subtitle">
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-user pad"></i>  Profile</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-cog pad"></i>  Settings</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-question-sign pad"></i>  Help center</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-log-out pad"></i>  Sign out</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- subnavbar -->
+<div class="subnavbar">
+    <div class="subnavbar-inner">
+        <div class="container">
+            <ul class="mainnav">
+                <li class="active"><a href="#"><h5>ACTIVE PACKAGE</h5> </a> </li>
+                <li><a href="#"><h5>PENDING PACKAGE</h5> </a> </li>
+                <li><a href="#"><h5>PAST PACKAGE</h5> </a></li>
+            </ul>
+            <div class="pull-right subnav-spacer col-sm-2" ><button id="createDeal" class="btn btn-danger small-high-btn">Create package</button></div>
+        </div>
+
+        <!-- /container -->
+    </div>
+    <!-- /subnavbar-inner -->
+</div>
+
+<!-- /.container -->
+<!--<div class="container margin-spacer" ng-controller="packageCtrl">
+    <div class="col-xs-12 thumbnail">
+        <div class="col-md-9 pull-left small-spacer"><h5 class="small-header-text">You have <b ng-bind="packages.length"></b> packages</h5></div>
+        <div class="pull-right small-spacer">
+            <a href="#" id="gridView" ng-click="isList( 'simplegrid' )"><i class="btn titletitle glyphicon glyphicon-th" ></i></a>
+            <a href="#" id="listView" ng-click="isList( 'simplelist' )"><i class="btn subtitle glyphicon glyphicon-align-justify"></i></a>
+        </div>
+    </div>
+</div>-->
+
+<div class="container margin-spacer" >
+    <div class="row">
+        <div class="col-xs-12" ng-controller="PublisherPackageCtrl">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-default navbar-custom">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                            <ul class="nav navbar-nav ">
+                                <li class="small-spacer"><h5 class="small-header-text">You have <b ng-bind="packages.length"></b> packages</h5></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right navbar-custom-underline">
+                                <li ng-hide="grouping" ng-click="isList( 'simplegrid' )"><a id="gridView"><span class="glyphicon glyphicon-th" ></span></a></li>
+                                <li ng-hide="grouping" ng-click="isList( 'simplelist' )"><a id="listView"><span class="glyphicon glyphicon-align-justify"></span></a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        
+            <!-- /.container -->
+            <div id="gridViewDiv" class="col-sm-12 col-md-12 col-lg-12 spacer"  ng-show="!simplelist">
+                <div class="row previews" > 
+                    <div class="col-lg-3 col-sm-6 small-spacer-left-right" ng-repeat="package in packages">
+                        <div class="thumbnail">
+                            <a class="post-image-link" href="#" data-toggle="modal" data-target="#{{package._id}}">
+                                <div>
+                                    <div class="right-fix-corner">
+                                        <div class="triangle-top-right"><label class="project-lable" ng-bind="package.price"></label></div>
+                                    </div>
+                                    <img class="img-responsive" src="../image/packages/{{package.image}}" alt=""  />
+                                </div>
+                            </a>
+                            <div class="text-center">
+                                <h5 class="title h3" ng-bind="package.packageName"><br></h5>
+                                <h5 class="subtitle" ng-bind="package.type"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="listViewDiv" class="col-sm-12 col-md-12 col-lg-12 spacer thumbnail" ng-show="simplelist">
+                <div class="row previews">
+                    <div class=" col-xs-12 col-md-12 col-lg-12  small-spacer-left-right" ng-repeat="package in packages">
+                        <div class="col-sm-12 " style="border: 1px solid #ddd; padding: 10px;">
+                            <a class="post-image-link" href="#" data-toggle="modal" data-target="#{{package._id}}">
+                                <div class="col-sm-1"><img class="x-small-image img-responsive" src="../image/packages/{{package.image}}" alt=""  /></div>
+                                <div class="col-sm-5"><h5 class="subtitle" ng-bind="package.packageName"><br></h5></div>
+                            </a>                            
+                        
+                            <div class="col-sm-2"><h5 class="subtitle">package</h5></div>
+                            <div class="col-sm-2"><h5 class="subtitle" ng-bind="package.type"></h5></div>
+                            <div class="col-sm-2"><h5 class="subtitle" ng-bind="package.price"></h5></div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="" ng-repeat="package in packages">
+                <div class="modal fade" id="{{package._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="row row-zero-mrg">
+                                <div class="col-md-8">
+                                    <div class="modal-pad">
+                                        <img class="pull-left x-small-image thumb-img img-responsive" src="../image/packages/{{package.image}}">
+                                        <h4 class="title vcenter" ng-bind="package.packageName"><br></h4>
+                                        <h5 class="subtitle" ng-bind="package.type"></h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#"><button type="button" class="col-md-12 btn default-button larg-high-btn" style="color: #ffffff;">Delete</button></a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#"><button type="button" class="col-md-12 btn danger-button larg-high-btn" >Edit package</button></a>&nbsp;
+                                </div>
+
+                            </div>
+                            <div class="row row-zero-mrg">
+
+                                <div class="col-md-4 modal-box-border">
+                                    <h6 class="subtitle">Above fold</h6>
+                                    <h6 class="title small-header-text" ng-bind="package.aboveFold"></h6>
+                                </div>
+                                <div class="col-md-4 modal-box-border">
+                                    <h6 class="subtitle">Price</h6>
+                                    <h6 class="title small-header-text" ng-bind-template="{{package.price}} (Base)"></h6>
+                                </div>
+                                <div class="col-md-4 modal-box-border">
+                                    <h6 class="subtitle">Min Impression</h6>
+                                    <h6 class="title small-header-text" ng-bind="package.minImpression"></h6>
+                                </div>
+                            </div>
+                            <div class="row modal-custom-footer row-zero-mrg" >
+                                <div class="col-xs-8">
+                                    <div class="col-sm-12">
+                                        <h6 class="subtitle" ng-bind="package.description"></h6>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" style="border-left: 1px solid #E5E5E5;">
+                                    <div class="col-sm-12 text-left">
+                                        <h6 class="subtitle">Sizes<br></h6>
+                                        <h6 class="small-header-text title" ng-repeat="size in package.sizes" ng-bind="size.one"></h6>
+                                        <h6 class="small-header-text title" ng-repeat="size in package.sizes" ng-bind="size.two"></h6>
+                                        <h6 class="small-header-text title" ng-repeat="size in package.sizes" ng-bind="size.three"></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+         </div>
+    </div>
+</div>
+
+<!-- jQuery
+<script src="js/jquery.js"></script> -->
+
+<script type="text/javascript" src="../js/angular/angular.js"></script>
+<script type="text/javascript" src="../js/angular/forwardAppPublisher.js"></script>
+<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script data-require="bootstrap@3.1.1" data-semver="3.1.1" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS-->
+    <link rel="stylesheet" href="../css/bootstrap-3.2.0.min.css" type="text/css">
+
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+
+    <script type="text/javascript" src="../js/bootstrap-3.2.0.min.js"></script>
+
+    <link rel="stylesheet" href="../css/jquery.masterblaster.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-multiselect.css" type="text/css">
+    <script type="text/javascript" src="../js/bootstrap-multiselect.js"></script>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link href="../css/modern-business.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="../css/daterangepicker-bs3.css" />
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+    <![endif]-->
+
+</head>
+
+<body ng-app="forwardAppBuyer">
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand customLogo" href="Marketplaces-Basis.html"><img src="../image/logo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active pad"><a href="#">Marketplace</a></li>
+                <li class="pad"><a href="Current-Deals.html">Current deals</a></li>
+                <li class="pad"><a href="#">History</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-search"></i></a>
+                </li>
+
+                <li class="dropdown" >
+                    <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i><span class="notification_badge badge">3</span>
+                    </a>
+                    <ul class="notification dropdown-menu arrow" role="menu">
+                        <li class="notification-header"><span>Notifications</span><span class="badge">3</span></li>
+                        <li class="divider"></li>
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer"><a class="active row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Fabio Basile</span><span class="msg">just bought "Italian Food Lovers - 24Kitchen"</span></div>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Eric Hoffman</span><span class="msg">sent you a personal message</span></div>
+                                </div>
+                            </a></li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">NRC.nl Valentines Campaign</span><span class="msg">has started at 12:00 pm today</span></div>
+                                </div>
+                            </a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown active-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle profile-image" src="../image/user/default_profile_user.png"></a>
+                    <ul class="profile-menu dropdown-menu" role="menu">
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer">
+                                <a class="active row">
+                                    <div class="row-leftmrg subtitle">
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-user pad"></i>  Profile</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-cog pad"></i>  Settings</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-question-sign pad"></i>  Help center</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-log-out pad"></i>  Sign out</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<!-- subnavbar -->
+<div class="row row-zero-mrg row-zero-mrg buyer-subnav-border">
+    <div class="container">
+        <div class="col-md-8">
+
+            <!-- Start All Platforms dropdown -->
+            <div class="col-md-2 buyerText-center">
+                <a href="Package-Details-Charts.html"><h4 class="text-left subtitle"> <i class="glyphicon glyphicon-chevron-left"></i> Back </h4></a>
+            </div>
+            <!-- End All Platforms dropdown -->
+            <!-- Start all categories dropdown -->
+        </div>
+        <div class="col-md-4" >
+            <div class="col-xs-6" >
+                <a href="#"><button class="btn-sm btn btn-default custom-btn-align"><h6>Save</h6></button></a>
+            </div>
+            <div class="col-xs-6" >
+                <a href="#"><button class="btn-sm btn btn-danger custom-btn-align"><h6>Buy</h6></button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container margin-spacer" ng-controller="CreateOwnPackageCtrl">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12 ">
+            <div class="col-xs-12 col-md-12 col-lg-12 thumbnail">
+                <div class="col-xs-12 col-md-12 col-lg-12">
+                    <h5 href="Package-Details-Charts.html">CREATE YOUR OWN PACKAGE</h5>
+                </div><!-- /.container-fluid -->
+                <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <ul class="nav nav-tabs col-sm-pull-8" role="tablist">
+                        <li role="presentation" id="basicSetupTab" class="active border-tab"><a href="#BasicSetup_Tab" role="tab" data-toggle="tab">BASIC SETUP</a></li>
+                        <li role="presentation" id="inventoryTab" class="border-tab"><a href="#Inventory_Tab" role="tab" data-toggle="tab">INVENTORY</a></li>
+                        <li role="presentation" id="audienceTab" class="border-tab"><a href="#" role="tab" data-toggle="tab">AUDIENCE</a></li>
+                        <li role="presentation" id="pricingTab" class="border-tab"><a href="#" role="tab" data-toggle="tab">PRICING</a></li>
+                    </ul>
+
+                    <!----------------- Tabs --------------------------------->
+                    <div class="tab-content">
+                        <!----------------- Basic setup Tabs --------------------------------->
+                        <div role="tabpanel" class="tab-pane active spacer" id="BasicSetup_Tab">                            
+                            <div class="col-xs-12">
+                                <div class="col-md-6">
+                                    <label>Name :</label>
+                                    <input type="text" id="packageName" placeholder="Name of package"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Schedule : </label><br />
+                                    <input type="text" id="schedule" placeholder="Select your period" readonly class="arrowDown"/>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+
+                            <div class="col-xs-12" id="guaranteedDiv">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    
+                                    <div class="spacer"></div>
+                                    <label>Viewability guarantee</label><br>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <button class="btn active-button view-toggle"> Yes
+                                        </button>
+                                        <button class="btn default-button view-toggle"> No
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-6 col-md-6 col-lg-6" style="border-left: 1px solid #e0e0e0;">
+                                    <div class="col-xs-12 spacer">
+                                        <label>Impressions </label>
+                                        <div id="impressions-range"></div>
+                                        <label class="slider-left">0</label>
+                                        <label  class="sliderValue" id="impressioinsCurrent"></label>
+                                        <label class="slider-right">500000</label>
+                                    </div>
+                                    <div class="col-xs-12 spacer">
+                                        <label>Win rate </label>
+                                        <div id="winrate-range"></div>
+                                        <label class="slider-left">0%</label>
+                                        <label  class="sliderValue" id="winrateCurrent"></label>
+                                        <label class="slider-right">100%</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 text-center" >
+                                <div class="col-xs-12"><button class="btn btn-danger" id="basicTabNext">Next step</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!----------------- End Basic setup Tab --------------------------------->
+
+                        <!----------------- Inventory Tab --------------------------------->
+                        <div role="tabpanel" class="tab-pane spacer" id="Inventory_Tab">
+                            <div class="row col-md-12 mrg-bottom">
+                                <div class="col-md-6 div-center" >
+                                    <div class="selectbox-padding" >
+                                        <!-------------------------------------------------------Select publisher -------------------------------------------------------->
+                                        Publisher 1 :
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#select-publisher').multiselect();
+                                            });
+                                        </script>
+                                        <select id="select-publisher" multiple="multiple">
+
+                                        </select>
+                                        <!-------------------------------------------------------End Select publisher -------------------------------------------------------->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 divider-left div-center">
+                                    <div class="selectbox-padding">
+                                        <!-------------------------------------------------------Select Categories -------------------------------------------------------->
+                                        Categories
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#select-categories').multiselect();
+                                            });
+                                        </script>
+                                        <select id="select-categories" multiple="multiple">
+                                            <option value="Categories 1">Categories 1</option>
+                                            <option value="Automotive">Automotive</option>
+                                            <option value="Categories 3">Categories 3</option>
+                                            <option value="Categories 4">Categories 4</option>
+                                            <option value="Categories 5">Categories 5</option>
+                                            <option value="Categories 6">Categories 6</option>
+                                            <option value="Categories 7">Categories 7</option>
+                                            <option value="Categories 8">Categories 8</option>
+                                            <option value="Categories 9">Categories 9</option>
+                                            <option value="Categories 10">Categories 10</option>
+                                            <option value="Categories 11">Categories 11</option>
+                                            <option value="Categories 12">Categories 12</option>
+                                            <option value="Categories 13">Categories 13</option>
+                                            <option value="Categories 14">Categories 14</option>
+                                            <option value="Categories 15">Categories 15</option>
+                                        </select>
+                                        <!-------------------------------------------------------End Select Categories -------------------------------------------------------->
+                                    </div>
+                                    <div class="selectbox-padding">
+                                        <!----------------------------------------------------- Select Size dropdown strat ------------------------------------------>
+                                        Sizes
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#select-size').multiselect();
+                                            });
+                                        </script>
+                                        <select id="select-size" multiple="multiple">
+                                            <option value="720 x 80">720 x 80</option>
+                                            <option value="250 x 250">250 x 250</option>
+                                            <option value="250 x 200">250 x 200</option>
+                                            <option value="200 x 200">200 x 200</option>
+                                            <option value="125 x 125">125 x 125</option>
+                                        </select>
+                                        <!-------------------------------------------------------End Select Size Dropdown---------------------------------------------->
+                                    </div>
+                                    <div class="selectbox-padding">
+                                        <!-------------------------------------------------------Select Sites -------------------------------------------------------->
+                                        Sites
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#select-sites').multiselect();
+                                            });
+                                        </script>
+                                        <select id="select-sites" multiple="multiple">
+                                            <optgroup label="Site number one">
+                                                <option value="www.siteone.com">www.siteone.com</option>
+                                            </optgroup>
+                                            <optgroup label="Site number two">
+                                                <option value="www.sitetwo.com">www.sitetwo.com</option>
+                                            </optgroup>
+                                            <optgroup label="Site number three">
+                                                <option value="www.sitethree.com">www.sitethree.com</option>
+                                            </optgroup>
+                                        </select>
+                                        <!---------------------------------------------------------End select sites-------------------------------------------------------->
+                                    </div>
+                                    <div class="selectbox-padding">
+                                        <!-------------------------------------------------------Select placement -------------------------------------------------------->
+                                        Placements
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#select-placements').multiselect();
+                                            });
+                                        </script>
+                                        <select id="select-placements" multiple="multiple">
+                                            <option value="Placements 1">Placements 1</option>
+                                            <option value="Placements 2">Placements 2</option>
+                                            <option value="Placements 3">Placements 3</option>
+                                            <option value="Placements 4">Placements 4</option>
+                                            <option value="Placements 5">Placements 5</option>
+                                        </select>
+                                        <!--------------------------------------------End Select Sites -------------------------------------------------------->
+                                    </div>
+                                </div>
+                            </div>
+                            <!---------------------------------------------------Start Add new publisher --------------------------------------------------->
+                            <div class="row row-zero-mrg">
+                                <div class="top-bottom-border col-md-12 newpub-back" id="addPub" style="display: none;">
+                                    <div class="col-md-6 div-center" >
+                                        <div class="selectbox-padding" >
+                                            <!-------------------------------------------------------Select publisher -------------------------------------------------------->
+                                            Publisher 2 :
+                                            <script type="text/javascript">
+                                                $(document).ready(function() {
+                                                    $('#select-newpublisher').multiselect();
+                                                });
+                                            </script>
+                                            <select id="select-newpublisher" multiple="multiple">
+
+                                            </select>
+                                            <!-------------------------------------------------------End Select publisher -------------------------------------------------------->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-zero-mrg mrg-bottom"></div>
+                            <div class="custom-text-align top-bottom-border col-md-12" id="addPublisher">
+                                <img src="../image/Plus.png" />
+                                ADD PUBLISHER
+                            </div>
+                        <!---------------------------------------------------End Add new publisher --------------------------------------------------->
+                        <div class="col-sm-12 col-md-12 col-lg-12 text-center" >
+                            <div class="col-md-12"><button class="btn btn-default" id="inventoryPrev">Previous</button>
+                                <button class="btn btn-danger" id="inventoryNext">Next step</button></div>
+                        </div>
+                    </div>
+                    <!----------------- End Inventory Tab --------------------------------->
+
+                    <!----------------- Audience Tab --------------------------------->
+                    <div role="tabpanel" class="tab-pane spacer" id="Audience_Tab">
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <label>Gender :</label><br>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <button class="btn active-button gender-toggle" id="genderBoth"> Both
+                                    </button>
+                                    <button class="btn default-button gender-toggle" id="genderMale"> Male
+                                    </button>
+                                    <button class="btn default-button gender-toggle" id="genderFemale"> Female
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <div class="col-md-6">
+                                <label>Locations : </label>
+                                <input id="addLocation" placeholder="Location"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Interest : </label>
+                                <input type="text" id="interest" placeholder="Interests"/>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 text-center" >
+                            <div class="col-xs-12">
+                                <button class="btn btn-default" id="audiencePrev">Previous</button>
+                                <button class="btn btn-danger" id="audienceNext">Next step</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!----------------- End Audience Tab --------------------------------->
+
+                    <!----------------- Pricing Tab --------------------------------->
+                    <div role="tabpanel" class="tab-pane spacer" id="Pricing_Tab">
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th ng-repeat="week in placements[0]">
+                                            Week {{ $index+1 }}
+                                        </th>                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="placement in placements">
+                                            <th>
+                                                Placement {{$index+1}}
+                                            </th>
+                                            <td ng-repeat="week in placement">
+                                                <select class="customSelect">
+                                                    <option ng-repeat="tier in week" value="{{tier.value}}">{{tier.value | number:2}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WR: {{tier.wr}}%</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 text-center" >
+                            <div class="col-xs-12">
+                                <button class="btn btn-default" id="pricingPrev">Previous</button>
+                                <button class="btn btn-danger" id="pricingNext">Next step</button>
+                                <button class="btn btn-default" id="pricingModify">Modify</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!----------------- End Pricing Tab --------------------------------->
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- <div class="col-xs-12 col-md-4 col-lg-4">
+            <div class="col-sm-12 col-md-12 col-lg-12 thumbnail">
+                <div class="col-xs-12 col-md-12 col-lg-12">
+                    <h5 href="Package-Details-Charts.html">SUMMARY</h5>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="well">
+                                <h3 class="subtitle">Impressions</h3>
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="well">
+                                <h3 class="subtitle">Ask price</h3>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-12" id="basicResult">
+                        </div>
+                        <div class="col-md-12" id="inventoryResult">
+                        </div>
+                        <div class="col-md-12" id="audienceResult">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<!-- Bootstrap Core JavaScript -->
+<script type="text/javascript" src="../js/angular/angular.js"></script>
+<script type="text/javascript" src="../js/angular/app.js"></script>
+
+<script data-require="angular.js@1.3.0" data-semver="1.3.0" src="http://code.angularjs.org/1.3.0/angular.js"></script>
+<script src="../js/angular/forwardAppBuyer.js"></script>
+<script src="../js/pagination/pagination.js"></script>
+<script src="../js/forward-app.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.masterblaster.js"></script>
+<script type="text/javascript" src="../js/moment.js"></script>
+<script type="text/javascript" src="../js/daterangepicker.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var optionSet2 = {
+            startDate: moment().startOf('week'),
+            endDate: moment().endOf('week'),
+            opens: 'left',
+            separator : ' to ',
+            prefix : 'From ',
+            format : 'D MMMM YYYY',
+            applyClass:'btn-danger'
+        };
+		$('#schedule').daterangepicker(optionSet2);
+    });
+
+    $(document).on("click","#addPublisher",function(e){
+        $("#addPub").toggle();
+    });
+</script>
+
+</body>
+
+</html>

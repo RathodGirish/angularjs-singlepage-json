@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS
+    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="all" href="../css/daterangepicker-bs3.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+    <![endif]-->
+
+</head>
+
+<body ng-app="forwardAppBuyer">
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand customLogo" href="Marketplaces-Basis.html"><img src="../image/logo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active pad"><a href="#">Marketplace</a></li>
+                <li class="pad"><a href="Current-Deals.html">Current deals</a></li>
+                <li class="pad"><a href="#">History</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-search"></i></a>
+                </li>
+
+                <li class="dropdown" >
+                    <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i><span class="notification_badge badge">3</span>
+                    </a>
+                    <ul class="notification dropdown-menu arrow" role="menu">
+                        <li class="notification-header"><span>Notifications</span><span class="badge">3</span></li>
+                        <li class="divider"></li>
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer"><a class="active row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Fabio Basile</span><span class="msg">just bought "Italian Food Lovers - 24Kitchen"</span></div>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">Eric Hoffman</span><span class="msg">sent you a personal message</span></div>
+                                </div>
+                            </a></li>
+                            <li class="divider"></li>
+                            <li class="small-spacer"><a class="row">
+                                <div class="row row-leftmrg">
+                                    <div class="col-md-2">
+                                        <img alt="avatar" src="../image/user/user1.png">
+                                    </div>
+                                    <div class="col-md-9"><span class="name">NRC.nl Valentines Campaign</span><span class="msg">has started at 12:00 pm today</span></div>
+                                </div>
+                            </a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown active-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-sent you a personal message profile-image" src="../image/user/default_profile_user.png"></a>
+                    <ul class="profile-menu dropdown-menu" role="menu">
+                        <div class="notification-list remove-box">
+                            <li class="small-spacer">
+                                <a class="active row">
+                                    <div class="row-leftmrg subtitle">
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-user pad"></i>  Profile</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-cog pad"></i>  Settings</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-question-sign pad"></i>  Help center</h5>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5><i class="glyphicon glyphicon-log-out pad"></i>  Sign out</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- subnavbar -->
+<div class="row row-zero-mrg row-zero-mrg buyer-subnav-border">
+    <div class="container">
+        <div class="col-md-8">
+
+            <!-- Start All Platforms dropdown -->
+            <div class="col-md-2 buyerText-center">
+                <a href="Marketplaces-Basis.html"><h4 class="text-left subtitle"> <i class="glyphicon glyphicon-chevron-left"></i> Back to list</h4></a>
+            </div>
+            <!-- End All Platforms dropdown -->
+            <!-- Start all categories dropdown -->
+        </div>
+        <div class="col-md-4" ><a href="Create-Your-Own_Package.html"><button class="btn btn-danger custom-btn-align"><h6>Create your own package</h6></button></a></div>
+    </div>
+</div>
+
+<div class="container margin-spacer" ng-controller="BuyerChartCtrl">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-lg-4">
+            <div class="col-md-12 thumbnail">
+                <div class="col-md-12">
+                    <div><img class="pull-left thumb-img " src="../image/user/default_user.png"></div>
+                    <div class="col-md-offset-4">
+                        <h3 class="title">Publisher name<br></h3>
+                        <h5 class="subtitle">Automotive</h5>
+                    </div>
+                </div>
+                <div class="col-sm-12"><hr></div>
+                <div class="col-md-12 ">
+                    <a href="#"><button type="button" class="col-md-12 btn danger-button larg-high-btn">Contact publisher</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8 col-lg-8">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-default navbar-custom">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                            <ul class="nav navbar-nav navbar-custom-underline">
+                                <li><a href="Package-Details-PackageOverview.html">OVERVIEW</a></li>
+                                <li class="active"><a href="#">AUDIENCE</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+
+
+            <!--  Area chart for visits -->
+            <div class="col-sm-12 col-md-12 col-lg-12 spacer" >
+                <div class="col-xs-12 padding-inner thumbnail">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6"><h5 class="subtitle">Visits</h5></div>
+                        <div class="col-xs-6 "><h5 class="subtitle pull-right">Last week <span class="caret"></span></h5></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div id="visitChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Pie charts for Gender and Age -->
+            <div class="col-xs-12 col-md-12 col-lg-12" >
+                <div class="row">
+                    <div class="col-lg-6 small-spacer-left-right padding-inner ">
+
+                        <div class="col-xs-12 thumbnail">
+                            <div id="genderPieChart"></div>
+                            <div id="genderText" ></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 small-spacer-left-right padding-inner">
+                        <div class="col-xs-12 thumbnail">
+                            <div id="agePieChart" ></div>
+                            <div id="ageText" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Column chart for Gender -->
+            <div class="col-sm-12 col-md-12 col-lg-12 spacer" >
+                <div class="col-xs-12 padding-inner thumbnail">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6"><h5 class="subtitle">Incomes</h5></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div id="genderColumnChart" ></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Bar charts for Places and Hobbies -->
+            <div class="col-xs-12 col-md-12 col-lg-12" >
+                <div class="row">
+                    <div class="col-lg-6 small-spacer-left-right padding-inner ">
+                        <div class="col-xs-12 thumbnail">
+                            <div class="col-xs-12"><h5 class="subtitle">Places</h5></div>
+                            <div class="col-xs-12"><div id="placesBarChart"></div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 small-spacer-left-right padding-inner">
+                        <div class="col-xs-12 thumbnail">
+                            <div class="col-xs-12"><h5 class="subtitle">Hobbies</h5></div>
+                            <div class="col-xs-12"><div id="hobbiesBarChart" ></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row row-zero-mrg"><hr/></div>
+<!-- /.container -->
+<div class="container margin-spacer">
+    <div class="col-md-12">
+        <div class="col-sm-9 small-spacer"><span class="small-spacer subtitle h3">Similar packages </span></div>
+    </div>
+</div>
+
+<!-- /.container -->
+<div class="container" ng-controller="PackageDetailViewCtrl">
+    <div class="row previews">
+        <div class="col-lg-3 col-sm-6 small-spacer-left-right" ng-repeat="package in similarPackages">
+            <div class="thumbnail">
+                <a class="post-image-link" href="#" data-toggle="modal" data-target="#{{package._id}}">
+                    <div>
+                        <div class="right-fix-corner">
+                            <div class="triangle-top-right"><label class="project-lable" ng-bind="package.price"></label></div>
+                        </div>
+                        <img class="img-responsive" src="../image/packages/{{package.image}}" alt=""  />
+                    </div>
+                </a>
+                <div class="text-center">
+                    <h5 class="title h3" ng-bind="package.packageName"><br></h5>
+                    <h5 class="subtitle" ng-bind="package.type"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+<script src="../js/angular/forwardAppBuyer.js"></script>
+<script src="../js/charts/buyer-charts.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="../js/pagination/pagination.js"></script>
+<script src="../js/forward-app.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.masterblaster.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+</body>
+
+</html>
